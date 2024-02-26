@@ -8,10 +8,19 @@ const Body = () => {
     SetScreen(screen+param); // Change the input value when the button is clicked
   };
   const buttonStyle = {
-    width: '25px', // Set the width
-    height: '25px', // Set the height
+    width: '100px', // Set the width
+    height: '100px', // Set the height
+    fontSize: '25px', 
     // Add any other desired styles here
   };
+
+  const inputStyle = {
+    width: '400px', // Set the width
+    height: '100px', // Set the height
+    fontSize: '25px', 
+    // Add any other desired styles here
+  };
+
 
   const handleButtonClick = (param) =>{
     console.log(screen);
@@ -57,7 +66,7 @@ const Body = () => {
   return (
     <div>
       <div>
-        <input type="text" id="screen"  value={screen}></input>
+        <input style={inputStyle} type="text" id="screen"  value={screen}></input>
       </div>
 
       <div>
@@ -83,7 +92,7 @@ const Body = () => {
         <button style={buttonStyle} onClick={()=>addValue('*')}>*</button>
 
       </div>
-        <button style={buttonStyle} onClick={()=>clearScreen()}>A</button>
+        <button style={buttonStyle} onClick={()=>clearScreen()}>AC</button>
         <button style={buttonStyle} onClick={()=>addValue('0')}>0</button>
         <button style={buttonStyle} onClick={()=>handleButtonClick('=')}>=</button>
         <button style={buttonStyle} onClick={()=>addValue('/')}>/</button>
